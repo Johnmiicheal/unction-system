@@ -17,7 +17,7 @@ sock.on('connection', (socket) => {
 	});
 });
 
-app.get('/api'. (req, res) => {
+app.get('/api', (req, res) => {
 	res.json({
 		message: 'Welcome to Unction Bidding Platform',
 	)};
