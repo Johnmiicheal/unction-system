@@ -11,27 +11,27 @@ const items = [
     },
     {
       title: "Third Product",
-      price: 250,
+      price: 350,
       img: "https://res.cloudinary.com/nefejames/image/upload/v1593631406/market%20square/clothes/cloth3.jpg",
     },
     {
       title: "Fourth Product",
-      price: 250,
+      price: 499.99,
       img: "https://res.cloudinary.com/nefejames/image/upload/v1593631406/market%20square/clothes/cloth4.jpg",
     },
     {
       title: "Fifth Product",
-      price: 250,
+      price: 269,
       img: "https://res.cloudinary.com/nefejames/image/upload/v1593631406/market%20square/clothes/cloth5.jpg",
     },
     {
       title: "Sixth Product",
-      price: 250,
+      price: 420,
       img: "https://res.cloudinary.com/nefejames/image/upload/v1593631406/market%20square/clothes/cloth6.jpg",
     },
     {
       title: "Seventh Product",
-      price: 250,
+      price: 7969.99,
       img: "https://res.cloudinary.com/nefejames/image/upload/v1593631406/market%20square/clothes/cloth7.jpg",
     },
   ];
