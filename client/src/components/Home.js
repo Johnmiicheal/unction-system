@@ -12,13 +12,14 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="/">
+        UNCTION
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -29,12 +30,16 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn() {
+const [userName, setUserName] = React.useState('');
+const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
+    localStorage.setItem('UserName', userName);
+    navigate('/products')
     const data = new FormData(event.currentTarget);
     console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+      username: data.get('username'),
+    //   password: data.get('password'),
     });
   };
 
@@ -61,13 +66,13 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="username"
+              label="Username"
+              name="username"
               autoFocus
+              onChange={(e) => setUserName(e.target.value)}
             />
-            <TextField
+            {/* <TextField
               margin="normal"
               required
               fullWidth
@@ -76,7 +81,7 @@ export default function SignIn() {
               type="password"
               id="password"
               autoComplete="current-password"
-            />
+            /> */}
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
