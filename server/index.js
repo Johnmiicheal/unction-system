@@ -11,7 +11,7 @@ const sock = require('socket.io')(http, {
 
 app.use(cors());
 sock.on('connection', (socket) => {
-	console.log(`🤟: ${socket.id} user just connected!`);
+	console.log(`🤟:User [${socket.id}] just connected!`);
 	socket.on('disconnect', () => {
 		console.log('😭: We have lost a comrade');
 	});
@@ -19,10 +19,10 @@ sock.on('connection', (socket) => {
 
 app.get('/api', (req, res) => {
 	res.json({
-		message: 'Welcome to Unction Bidding Platform',
-	)};
-});
+	  message: 'Welcome to Unction!!!',
+	});
+  });
 
 http.listen(PORT, () => {
-	console.log(`[ Listening on ${PORT} ]`);
+	console.log(`[⚡ Listening on ${PORT} ]`);
 });
