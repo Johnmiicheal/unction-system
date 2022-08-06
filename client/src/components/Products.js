@@ -5,14 +5,17 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import ImageList from '@mui/material/ImageList';
+import Grid from "@mui/material/Grid";
 import items from '../items';
 
 export default function Products() {
   return (
-    <Grid container spacing={2} alignItems='center' justifyContent='center' sx={{ mt: 5 }}>
+    <Grid container spacing={2} direction='row' alignItems='center' justifyContent='start' sx={{ background: '#cccccc' }}>
+    <ImageList cols={3} sx={{ mt: 2, ml: 6 }}>
+    
     {items.map(( product, i) => (
-         <Card sx={{ maxWidth: 345, mr: 2, mb: 2 }} key={i}> 
+         <Card sx={{ maxWidth: 345, mb: 2, mr: 2 }} key={i}> 
          <CardMedia
            component="img"
            height="140"
@@ -25,8 +28,7 @@ export default function Products() {
            </Typography>
            <Typography variant="body2" color="text.secondary"> ${product.price} </Typography>
            <Typography variant="body2" color="text.secondary">
-             Lizards are a widespread group of squamate reptiles, with over 6,000
-             species, ranging across all continents except Antarctica
+             Lorem
            </Typography>
          </CardContent>
          <CardActions>
@@ -34,6 +36,7 @@ export default function Products() {
          </CardActions>
        </Card>
     ))}
+    </ImageList>
     </Grid>
    
   );
